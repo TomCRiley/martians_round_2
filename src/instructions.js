@@ -1,9 +1,9 @@
 export default {
-  grid: [5, 3],
+  grid: { coord1: 5, coord2: 3 },
   robots: [
-    { position: [1, 1], direction: 'E', instructions: 'RFRFRFRF' },
-    { position: [3, 2], direction: 'N', instructions: 'FRRFLLFFRRFLL' },
-    { position: [0, 3], direction: 'W', instructions: 'LLFFFLFLFL' },
+    { position: { x: 1, y: 1 }, direction: 'E', instructions: 'RFRFRFRF' },
+    { position: { x: 3, y: 2 }, direction: 'N', instructions: 'FRRFLLFFRRFLL' },
+    { position: { x: 0, y: 3 }, direction: 'W', instructions: 'LLFFFLFLFL' },
   ],
 };
 

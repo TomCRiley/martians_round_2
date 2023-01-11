@@ -2,28 +2,35 @@ import { Robot } from './robot.js';
 import instructions from './instructions.js';
 
 let grid = [];
-console.log(instructions);
+// console.log(instructions);
 function init() {
   let gridSize = instructions.grid;
-  let gridInit = Array.from(Array(gridSize[0]), () => new Array(gridSize[1]));
+  grid = Array.from(Array(gridSize.coord1), () => new Array(gridSize.coord2));
+
   // should output grid size based on grid being 5 by 5. Output: [ [ <5 empty items> ], [ <5 empty items> ], [ <5 empty items> ], [ <5 empty items> ] ]
   // https://www.w3docs.com/snippets/javascript/how-to-create-a-two-dimensional-array-in-javascript.html
-  console.log(grid);
-  commands.robots.forEach((r) => {
+  // console.log(gridInit);
+  // console.log(instructions);
+  instructions.robots.forEach((r) => {
     //create a new robot at each location from the commands that are parsed by the commands variable
-    const robot = new Robot({
-      initialPosition: { x: r.position[0], y: r.position[1] },
+    const robot = new Robot(
+      { x: r.position.x, y: r.position.y },
       //first array item, second array item (so 3 and 1 for first robot)
-      instructions: r.instructions.split(''),
-    });
-    const initialLocation = grid[x];
-    initialLocation[y] = robot;
+      r.instructions.split('')
+    );
+    console.log(robot);
+    const initialLocation = grid[robot.currentPosition.x];
+    initialLocation[robot.currentPosition.y] = robot;
+    //25/26 func for creating grid position
   });
 }
 
-function moveRobots() {
+function move() {
   //func
+  //grid array
 }
+
+init();
 
 // const person = {
 //   name: 'Tom',
