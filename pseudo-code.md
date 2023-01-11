@@ -4,14 +4,14 @@
 - Create a robot
 - Set robot initial location
 - Robot to receive instructions
-- Robot interpretate instructions
+- Robot interpret instructions
 - Move the robot
 - Robot scent feature
 - Set blocking move if previous scent is set and robot might fall from grid
 
 ## Decide the size of grid
 
-Starting from the bottom left corner is position `(0,0)`, we receive coordinates for the upper right corner, setting the grdi dimensions.
+Starting from the bottom left corner is position `(0,0)`, we receive coordinates for the upper right corner, setting the grid dimensions.
 
 ## Create a robot
 
@@ -25,7 +25,7 @@ We need to receive initial location coordinates as an input, we place the robot 
 
 We need to receive instructions as an input
 
-## Robot interpretate instructions
+## Robot interpret instructions
 
 We need to update it's location by:
 
@@ -59,4 +59,4 @@ let compassCurrentLocation = compass[0];
 
 ## Move robot
 
-Check current position and orintation, interprate next instruction command and execute
+Check current position and orintation, interpret next instruction command and execute
